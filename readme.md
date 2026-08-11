@@ -66,7 +66,7 @@ A partir daí, selecionei a opção E2E Testing, escolhi o navegador de preferê
 
 ---
 
-# Feature Login
+# Feature 1 -  Login
 ---
 
 ### CT-01: Login com dados válidos
@@ -139,9 +139,27 @@ Descrição: Deixei o campo de e-mail em branco, preenchi a senha e tentei reali
 
 # Observações e apontamentos de bugs:
 
-1- CT 05 - Ao deixar o campo de senha em branco e clicar em "Sign in", o sistema exibe o alerta do front end (Password is required) e também a requisição à API exibindo a mensagem da API(iNVALID EMAIL OR PASSWORD).
+1- CT 05 - Ao deixar o campo de senha em branco e clicar em "Sign in", o sistema exibe o alerta do front end (Password is required) e também a requisição à API exibindo a mensagem da API(INVALID EMAIL OR PASSWORD).
 
 - Sugestão: O front-end deve interromper o envio da requisição, deixando o botão submit "inclicável" enquanto houver campos obrigatórios pendentes.
 
 ---
 
+# Feature 2 - Listagem de Heróis
+---
+
+CT 01 - Visualização da listagem de heróis após Login 
+
+Descrição: Realizei Login com credenciais válidas e acessei a tela inicial da aplicação onde deveria ser exibido a listagem de heróis após login
+
+ - Resultado Esperado: Após Login, a tela deve exibir a listagem com 7 heróis, conforme pré estabelecido no tesdte manual
+
+ - Resultado Obtido: Após Login, a tela exibiu a listagem com 7 heróis.
+
+# Observações e apontamentos de bugs:
+
+1- CT 01 - Caminho idêntico para telas diferentes, a URL da tela de login é a mesma da tela com usuário logado.
+
+- Sugestão: O front-end deve ter rotas distintas, para telas diferentes, ou seja, a URL da tela de Login deve ser uma , e da tela após Login,. deve ser outra URL, neste caso, melhoraria a usabilidade, permitiria compartilhamento de links diretos e contribui para o isolamento nas automações.
+
+---
