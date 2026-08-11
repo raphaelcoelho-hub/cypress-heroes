@@ -1,6 +1,6 @@
 describe('Funcionalidade: Login', () => {
     it('deve realizar login com credenciais válidas', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
 
@@ -13,7 +13,7 @@ describe('Funcionalidade: Login', () => {
     });
 
     it('deve falhar ao realizar login com email inválido e senha válida', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
 
@@ -26,7 +26,7 @@ describe('Funcionalidade: Login', () => {
     });
 
     it('deve falhar ao realizar login com email válido e senha inválida', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
 
@@ -39,7 +39,7 @@ describe('Funcionalidade: Login', () => {
     });
 
     it('deve falhar ao realizar login com email e senha inválidos', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
 
@@ -54,7 +54,7 @@ describe('Funcionalidade: Login', () => {
 
 
     it('ao deixar o campo Password em branco, deve exibir mensagem de erro', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
         
         cy.contains('Login').click();
 
@@ -66,7 +66,7 @@ describe('Funcionalidade: Login', () => {
 
 
     it('ao deixar o campo Email em branco, deve exibir mensagem de erro', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
         cy.get('[data-cy="email"]').clear();
@@ -77,7 +77,7 @@ describe('Funcionalidade: Login', () => {
     })  
 
     it('ao deixar os campos Email e Password em branco, deve exibir mensagens de erro', () => {
-        cy.visit('http://localhost:3000/heroes');
+        cy.visit('/signin');
 
         cy.contains('Login').click();
         cy.get('[data-cy="email"]').clear();
