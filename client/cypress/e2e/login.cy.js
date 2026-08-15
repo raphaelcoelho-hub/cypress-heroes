@@ -86,6 +86,23 @@ describe('Funcionalidade: Login', () => {
         cy.contains('Email is required').should('be.visible');
         cy.contains('Password is required').should('be.visible');
 
+    })
+
+
+    it('Deve encerrar a sessão e redirecionar para a tela de login ao clicar em logout', () => {  
+
+        cy.visit('/signin');
+
+        cy.contains('Login').click();
+
+        cy.get('[data-cy="email"]').type('admin@test.com');
+        cy.get('[data-cy="password"]').type('test123');
+        cy.contains('button', 'Sign in').click();
+
+        cy.get('[href="/heroes/new"]').click();
+        cy.contains('Logout').click()
+
+        cy.url().should('include', '/signin');
 
     });
     
