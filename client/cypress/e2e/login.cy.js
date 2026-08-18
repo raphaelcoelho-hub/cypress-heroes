@@ -1,5 +1,5 @@
 describe('Funcionalidade: Login', () => {
-    it('deve realizar login com credenciais válidas', () => {
+    it.only('deve realizar login com credenciais válidas', () => {
         cy.visit('/signin');
 
         cy.contains('Login').click();

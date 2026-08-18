@@ -38,8 +38,8 @@ describe('Criar novo herói', () => {
         cy.contains('Sign in').click();
 
         // 2. Herói que será editado
-        const heroiOriginal = 'Raposa';
-        const heroiEditado = 'Cabuloso';
+        const heroiOriginal = 'Daron';
+        const heroiEditado = 'Slash';
 
         //Criando herói para garantir que ele esteja no banco de dados
         cy.get('[href="/heroes/new"]').click();
@@ -56,7 +56,7 @@ describe('Criar novo herói', () => {
         cy.contains(heroiOriginal).closest('div').find('[data-cy="pencil"]').click();
 
         //4. Edita as informações desejadas
-        cy.get('[data-cy="nameInput"]').clear().type('Cabuloso');
+        cy.get('[data-cy="nameInput"]').clear().type('Korn');
         cy.get('[data-cy="priceInput"]').clear().type('13');
         cy.get('[data-cy="fansInput"]').clear().type('60');
         cy.get('[data-cy="savesInput"]').clear().type('90');
@@ -196,10 +196,10 @@ describe('Criar novo herói', () => {
         cy.contains('Sign in').click();
 
         // 2. Herói criado para o teste de exclusão
-        const nomeHeroi = 'Teste Exclusão';
+        const nomeHeroi = 'Excluido';
 
         cy.get('[href="/heroes/new"]').click();
-        cy.get('[data-cy="nameInput"]').type('Teste Exclusão');
+        cy.get('[data-cy="nameInput"]').type('Excluido');
         cy.get('[data-cy="priceInput"]').type('22');
         cy.get('[data-cy="fansInput"]').type('55');
         cy.get('[data-cy="savesInput"]').type('66');

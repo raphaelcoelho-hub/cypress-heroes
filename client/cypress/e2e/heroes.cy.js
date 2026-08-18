@@ -10,7 +10,7 @@ describe('Listagem de heróis', () => {
 
         // Verifica se a lista de heróis é exibida corretamente
         cy.visit('/heroes');
-        cy.get('[data-cy="hero-card"]').should('have.length', 7);
+        cy.get('[data-cy="hero-card"]').should('have.length', 20);
     
     });
 
